@@ -1,0 +1,19 @@
+{
+	phase = compile;
+	inputs = 1;
+	command = clang;
+	args =
+	(
+		"-c",
+		"-o",
+		"$OUTPUT",
+		"$INPUT"
+	);
+	patterns =
+	(
+		name = "OUTPUT"
+		input = "$INPUT"
+		match = ".*"
+		replace = "&.o"
+	)
+}
